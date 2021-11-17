@@ -72,7 +72,7 @@ struct ContentView: View {
     
     var weather: some View {
         Button {
-            var weatherEmojis: Array<String> = ["☀️", "⚡️", "⛅️", "☁️", "❄️", "🌧", "🌬", "☔️", "💨"]
+            let weatherEmojis: Array<String> = ["☀️", "⚡️", "⛅️", "☁️", "❄️", "🌧", "🌬", "☔️", "💨"]
             // Shuffle()
             emojis = weatherEmojis
             emojis.shuffle()
@@ -122,5 +122,8 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
             .preferredColorScheme(.light)
             .previewDevice("iPhone 13 Pro")
+        ContentView()
+            .preferredColorScheme(.light)
+            .previewDevice("iPhone 8")
     }
 }
