@@ -13,7 +13,7 @@ struct ContentView: View {
         
     var body: some View {
         VStack {
-            // #1
+            // #3
             Text("Memorize!")
                 .font(.largeTitle)
                 .fontWeight(.medium)
@@ -27,6 +27,7 @@ struct ContentView: View {
             }
             .foregroundColor(.red)
             Spacer(minLength: 20.0)
+            // #4
             // Themes
             HStack {
                 vehicles
@@ -44,9 +45,12 @@ struct ContentView: View {
     // Themes buttons
     var vehicles: some View {
         Button {
-            let vehiclesEmojis: Array<String> = ["🚗", "🚕", "🚙", "🚌", "🛻", "🛵", "🚔", "🚲", "🚛", "🚒"]
+            // #6
             // shuffled()
-            emojis = vehiclesEmojis.shuffled()
+            let vehiclesEmojis: Array<String> = ["🚗", "🚕", "🚙", "🚌", "🛻", "🛵", "🚔", "🚲", "🚛", "🚒"]
+                .shuffled()
+            // Extra credit #1
+            randomCountCards(for: vehiclesEmojis)
         } label: {
             VStack {
                 Image(systemName: "car.2")
@@ -58,9 +62,12 @@ struct ContentView: View {
  
     var nature: some View {
         Button {
-            let natureEmojis: Array<String> = ["🐸", "🦁", "🐯", "🦄", "🦋", "🐛", "🐞", "🐜", "🐌", "🐠", "🌲", "🍄", "⭐️", "🌺", "🌹"]
+            // #6
             // shuffled()
-            emojis = natureEmojis.shuffled()
+            let natureEmojis: Array<String> = ["🐸", "🦁", "🐯", "🦄", "🦋", "🐛", "🐞", "🐜", "🐌", "🐠", "🌲", "🍄", "⭐️", "🌺", "🌹"]
+                .shuffled()
+            // Extra credit #1
+            randomCountCards(for: natureEmojis)
         } label: {
             VStack {
                 Image(systemName: "leaf")
@@ -72,10 +79,12 @@ struct ContentView: View {
     
     var weather: some View {
         Button {
-            let weatherEmojis: Array<String> = ["☀️", "⚡️", "⛅️", "☁️", "❄️", "🌧", "🌬", "☔️", "💨"]
+            // #6
             // Shuffle()
-            emojis = weatherEmojis
-            emojis.shuffle()
+            let weatherEmojis: Array<String> = ["☀️", "⚡️", "⛅️", "☁️", "❄️", "🌧", "🌬", "☔️", "💨"]
+                .shuffled()
+            // Extra credit #1
+            randomCountCards(for: weatherEmojis)
         } label: {
             VStack {
                 Image(systemName: "cloud")
@@ -83,6 +92,12 @@ struct ContentView: View {
                     .font(.headline)
             }
         }
+    }
+    
+    // Extra credit #1
+    func randomCountCards(for themedEmojis: Array<String>) {
+        let cardsCount = Int.random(in: 4..<themedEmojis.count)
+        emojis = Array<String>(themedEmojis[0..<cardsCount])
     }
 }
 
