@@ -9,15 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let emojis: Array<String> = ["🚂", "🚜", "🚁", "🚀", "🚲", "🛫", "🚢", "🦼", "🎢", "🛰", "🏎", "🚓", "🚒", "🚑", "🛵", "🚆", "🚞", "⛴", "🗺", "🛸"]
-    
-    @State var emojiCount = 6
-    
+    @State var emojis: Array<String> = ["🚗", "🚕", "🚙", "🚌", "🛻", "🛵", "🚔", "🚲", "🚛", "🚒"]
+        
     var body: some View {
         VStack {
+            // #1
+            Text("Memorize!")
+                .font(.largeTitle)
+                .fontWeight(.medium)
             ScrollView {
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 65.0))]) {
-                    ForEach(emojis[0..<emojiCount], id: \.self) { emoji in
+                    ForEach(emojis[0..<emojis.count], id: \.self) { emoji in
                         CardView(content: emoji)
                             .aspectRatio(2/3, contentMode: .fit)
                     }
@@ -25,10 +27,13 @@ struct ContentView: View {
             }
             .foregroundColor(.red)
             Spacer(minLength: 20.0)
+            // Themes
             HStack {
-                add
+                vehicles
                 Spacer()
-                remove
+                nature
+                Spacer()
+                weather
             }
             .font(.largeTitle)
             .padding(.horizontal)
@@ -36,26 +41,48 @@ struct ContentView: View {
         .padding(.horizontal)
     }
     
-    var add: some View {
+    // Themes buttons
+    var vehicles: some View {
         Button {
-            if emojiCount < emojis.count {
-                emojiCount += 1
-            }
+            let vehiclesEmojis: Array<String> = ["🚗", "🚕", "🚙", "🚌", "🛻", "🛵", "🚔", "🚲", "🚛", "🚒"]
+            // shuffled()
+            emojis = vehiclesEmojis.shuffled()
         } label: {
-            Image(systemName: "plus.circle")
+            VStack {
+                Image(systemName: "car.2")
+                Text("Vehicles")
+                    .font(.headline)
+            }
         }
-
+    }
+ 
+    var nature: some View {
+        Button {
+            let natureEmojis: Array<String> = ["🐸", "🦁", "🐯", "🦄", "🦋", "🐛", "🐞", "🐜", "🐌", "🐠", "🌲", "🍄", "⭐️", "🌺", "🌹"]
+            // shuffled()
+            emojis = natureEmojis.shuffled()
+        } label: {
+            VStack {
+                Image(systemName: "leaf")
+                Text("Nature")
+                    .font(.headline)
+            }
+        }
     }
     
-    var remove: some View {
-        Button  {
-            if emojiCount > 1 {
-               emojiCount -= 1
-            }
+    var weather: some View {
+        Button {
+            var weatherEmojis: Array<String> = ["☀️", "⚡️", "⛅️", "☁️", "❄️", "🌧", "🌬", "☔️", "💨"]
+            // Shuffle()
+            emojis = weatherEmojis
+            emojis.shuffle()
         } label: {
-            Image(systemName: "minus.circle")
+            VStack {
+                Image(systemName: "cloud")
+                Text("Weather")
+                    .font(.headline)
+            }
         }
-
     }
 }
 
