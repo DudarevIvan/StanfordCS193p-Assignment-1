@@ -18,7 +18,7 @@ struct ContentView: View {
                 .font(.largeTitle)
                 .fontWeight(.medium)
             ScrollView {
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 65.0))]) {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: widthThatBestFits(cardCount: emojis.count)))]) {
                     ForEach(emojis[0..<emojis.count], id: \.self) { emoji in
                         CardView(content: emoji)
                             .aspectRatio(2/3, contentMode: .fit)
@@ -47,7 +47,7 @@ struct ContentView: View {
         Button {
             // #6
             // shuffled()
-            let vehiclesEmojis: Array<String> = ["🚗", "🚕", "🚙", "🚌", "🛻", "🛵", "🚔", "🚲", "🚛", "🚒"]
+            let vehiclesEmojis: Array<String> = ["🚗", "🚕", "🚙", "🚌", "🛻", "🛵", "🚔", "🚲", "🚛", "🚒", "🚴🏽‍♀️", "🦼", "✈️", "🚘", "⛵️", "🛳", "🛶", "🚀", "🛸"]
                 .shuffled()
             // Extra credit #1
             randomCountCards(for: vehiclesEmojis)
@@ -64,7 +64,7 @@ struct ContentView: View {
         Button {
             // #6
             // shuffled()
-            let natureEmojis: Array<String> = ["🐸", "🦁", "🐯", "🦄", "🦋", "🐛", "🐞", "🐜", "🐌", "🐠", "🌲", "🍄", "⭐️", "🌺", "🌹"]
+            let natureEmojis: Array<String> = ["🐸", "🦁", "🐯", "🦄", "🦋", "🐛", "🐞", "🐜", "🐌", "🐠", "🌲", "🍄", "⭐️", "🌺", "🌹", "🪨", "🪵", "🌵", "🐉", "🦩", "🦜"]
                 .shuffled()
             // Extra credit #1
             randomCountCards(for: natureEmojis)
@@ -81,7 +81,7 @@ struct ContentView: View {
         Button {
             // #6
             // Shuffle()
-            let weatherEmojis: Array<String> = ["☀️", "⚡️", "⛅️", "☁️", "❄️", "🌧", "🌬", "☔️", "💨"]
+            let weatherEmojis: Array<String> = ["☀️", "⚡️", "⛅️", "☁️", "❄️", "🌧", "🌬", "☔️", "💨", "⛱", "🌕", "🌍"]
                 .shuffled()
             // Extra credit #1
             randomCountCards(for: weatherEmojis)
@@ -98,6 +98,20 @@ struct ContentView: View {
     func randomCountCards(for themedEmojis: Array<String>) {
         let cardsCount = Int.random(in: 4..<themedEmojis.count)
         emojis = Array<String>(themedEmojis[0..<cardsCount])
+    }
+    
+    // Extra credit #2
+    func widthThatBestFits(cardCount: Int) -> CGFloat {
+        // 0 <= 4x4 (0...15)
+        // 5x5+1 <= 5x6 (21...30)
+        // 6x5+1 < ... (31...)
+        if cardCount > 0 && cardCount < 16 {
+            return 75.0
+        } else if cardCount >= 16 && cardCount <= 26 {
+            return 55.0
+        } else {
+            return 35.0
+        }
     }
 }
 
