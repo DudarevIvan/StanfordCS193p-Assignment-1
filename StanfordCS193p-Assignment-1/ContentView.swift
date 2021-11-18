@@ -102,15 +102,21 @@ struct ContentView: View {
     
     // Extra credit #2
     func widthThatBestFits(cardCount: Int) -> CGFloat {
-        // 0 <= 4x4 (0...15)
-        // 5x5+1 <= 5x6 (21...30)
-        // 6x5+1 < ... (31...)
-        if cardCount > 0 && cardCount < 16 {
+        // 4x4 (0...16)
+        // 5x5 (17...25)
+
+        // cardCount * (4/16)
+        // cardCount * (5/25)
+        
+        let fourCardInLine = Double(cardCount) * (4.0 / 16.0)
+        let fiveCardInLine = Double(cardCount) * 5.0 / 25.0
+
+        if 0...4 ~= fourCardInLine {
             return 75.0
-        } else if cardCount >= 16 && cardCount <= 26 {
+        } else if 0...5 ~= fiveCardInLine {
             return 55.0
         } else {
-            return 35.0
+            return 25.0
         }
     }
 }
