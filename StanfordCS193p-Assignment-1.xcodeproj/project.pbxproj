@@ -11,7 +11,19 @@
 		2C64C24F274285B5008A5D0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C64C24E274285B5008A5D0D /* ContentView.swift */; };
 		2C64C251274285B6008A5D0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C64C250274285B6008A5D0D /* Assets.xcassets */; };
 		2C64C254274285B6008A5D0D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C64C253274285B6008A5D0D /* Preview Assets.xcassets */; };
+		2C64C3CA2746E6BC008A5D0D /* StanfordCS193p_Assignment_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C64C3C92746E6BC008A5D0D /* StanfordCS193p_Assignment_1UITests.swift */; };
+		2C64C3CC2746E6BC008A5D0D /* StanfordCS193p_Assignment_1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C64C3CB2746E6BC008A5D0D /* StanfordCS193p_Assignment_1UITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2C64C3CD2746E6BC008A5D0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C64C241274285B5008A5D0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C64C248274285B5008A5D0D;
+			remoteInfo = "StanfordCS193p-Assignment-1";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2C64C249274285B5008A5D0D /* StanfordCS193p-Assignment-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StanfordCS193p-Assignment-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +31,20 @@
 		2C64C24E274285B5008A5D0D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2C64C250274285B6008A5D0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C64C253274285B6008A5D0D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2C64C3C72746E6BC008A5D0D /* StanfordCS193p-Assignment-1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StanfordCS193p-Assignment-1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C64C3C92746E6BC008A5D0D /* StanfordCS193p_Assignment_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StanfordCS193p_Assignment_1UITests.swift; sourceTree = "<group>"; };
+		2C64C3CB2746E6BC008A5D0D /* StanfordCS193p_Assignment_1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StanfordCS193p_Assignment_1UITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2C64C246274285B5008A5D0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C64C3C42746E6BC008A5D0D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				2C64C24B274285B5008A5D0D /* StanfordCS193p-Assignment-1 */,
+				2C64C3C82746E6BC008A5D0D /* StanfordCS193p-Assignment-1UITests */,
 				2C64C24A274285B5008A5D0D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				2C64C249274285B5008A5D0D /* StanfordCS193p-Assignment-1.app */,
+				2C64C3C72746E6BC008A5D0D /* StanfordCS193p-Assignment-1UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +91,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		2C64C3C82746E6BC008A5D0D /* StanfordCS193p-Assignment-1UITests */ = {
+			isa = PBXGroup;
+			children = (
+				2C64C3C92746E6BC008A5D0D /* StanfordCS193p_Assignment_1UITests.swift */,
+				2C64C3CB2746E6BC008A5D0D /* StanfordCS193p_Assignment_1UITestsLaunchTests.swift */,
+			);
+			path = "StanfordCS193p-Assignment-1UITests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -87,6 +120,24 @@
 			productReference = 2C64C249274285B5008A5D0D /* StanfordCS193p-Assignment-1.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2C64C3C62746E6BC008A5D0D /* StanfordCS193p-Assignment-1UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C64C3D12746E6BC008A5D0D /* Build configuration list for PBXNativeTarget "StanfordCS193p-Assignment-1UITests" */;
+			buildPhases = (
+				2C64C3C32746E6BC008A5D0D /* Sources */,
+				2C64C3C42746E6BC008A5D0D /* Frameworks */,
+				2C64C3C52746E6BC008A5D0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C64C3CE2746E6BC008A5D0D /* PBXTargetDependency */,
+			);
+			name = "StanfordCS193p-Assignment-1UITests";
+			productName = "StanfordCS193p-Assignment-1UITests";
+			productReference = 2C64C3C72746E6BC008A5D0D /* StanfordCS193p-Assignment-1UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +150,10 @@
 				TargetAttributes = {
 					2C64C248274285B5008A5D0D = {
 						CreatedOnToolsVersion = 13.1;
+					};
+					2C64C3C62746E6BC008A5D0D = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 2C64C248274285B5008A5D0D;
 					};
 				};
 			};
@@ -116,6 +171,7 @@
 			projectRoot = "";
 			targets = (
 				2C64C248274285B5008A5D0D /* StanfordCS193p-Assignment-1 */,
+				2C64C3C62746E6BC008A5D0D /* StanfordCS193p-Assignment-1UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +183,13 @@
 			files = (
 				2C64C254274285B6008A5D0D /* Preview Assets.xcassets in Resources */,
 				2C64C251274285B6008A5D0D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C64C3C52746E6BC008A5D0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +205,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2C64C3C32746E6BC008A5D0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C64C3CA2746E6BC008A5D0D /* StanfordCS193p_Assignment_1UITests.swift in Sources */,
+				2C64C3CC2746E6BC008A5D0D /* StanfordCS193p_Assignment_1UITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C64C3CE2746E6BC008A5D0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C64C248274285B5008A5D0D /* StanfordCS193p-Assignment-1 */;
+			targetProxy = 2C64C3CD2746E6BC008A5D0D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2C64C255274285B6008A5D0D /* Debug */ = {
@@ -319,6 +399,50 @@
 			};
 			name = Release;
 		};
+		2C64C3CF2746E6BC008A5D0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 249UEHKB7H;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "icloud-dudarevmail.StanfordCS193p-Assignment-1UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "StanfordCS193p-Assignment-1";
+			};
+			name = Debug;
+		};
+		2C64C3D02746E6BC008A5D0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 249UEHKB7H;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "icloud-dudarevmail.StanfordCS193p-Assignment-1UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "StanfordCS193p-Assignment-1";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -336,6 +460,15 @@
 			buildConfigurations = (
 				2C64C258274285B6008A5D0D /* Debug */,
 				2C64C259274285B6008A5D0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C64C3D12746E6BC008A5D0D /* Build configuration list for PBXNativeTarget "StanfordCS193p-Assignment-1UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C64C3CF2746E6BC008A5D0D /* Debug */,
+				2C64C3D02746E6BC008A5D0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
